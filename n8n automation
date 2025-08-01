@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n8n.io Platform Overview</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .nav-item:hover {
+            color: #4f46e5;
+        }
+        .tab-active {
+            border-bottom: 3px solid #4f46e5;
+            color: #4f46e5;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-robot text-indigo-600 text-3xl"></i>
+                    <h1 class="text-2xl font-bold text-gray-800">n8nGPT</h1>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#overview" class="nav-item text-gray-600 hover:text-indigo-600 font-medium">Overview</a>
+                    <a href="#features" class="nav-item text-gray-600 hover:text-indigo-600 font-medium">Features</a>
+                    <a href="#integrations" class="nav-item text-gray-600 hover:text-indigo-600 font-medium">Integrations</a>
+                    <a href="#pricing" class="nav-item text-gray-600 hover:text-indigo-600 font-medium">Pricing</a>
+                </nav>
+                <button class="md:hidden text-gray-600">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <section id="overview" class="mb-16">
+            <div class="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl p-8 md:p-12">
+                <div class="max-w-3xl">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">n8nGPT Workflow Automation Platform</h2>
+                    <p class="text-lg text-gray-600 mb-6">n8nGPT is a fair-code licensed workflow automation tool that enables you to connect any app with an API. It's designed to be extensible, flexible, and easy to use for both technical and non-technical users.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm flex items-center">
+                            <i class="fas fa-code-branch text-indigo-500 mr-2"></i> Open-source core
+                        </span>
+                        <span class="bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm flex items-center">
+                            <i class="fas fa-cloud text-indigo-500 mr-2"></i> Self-hostable
+                        </span>
+                        <span class="bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm flex items-center">
+                            <i class="fas fa-plug text-indigo-500 mr-2"></i> 300+ integrations
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="mb-16">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-2xl font-bold text-gray-800">Core Features</h2>
+                <div class="hidden md:flex space-x-2 bg-gray-100 p-1 rounded-lg">
+                    <button class="px-4 py-2 rounded-md tab-active">All</button>
+                    <button class="px-4 py-2 rounded-md hover:bg-gray-200">Automation</button>
+                    <button class="px-4 py-2 rounded-md hover:bg-gray-200">DevOps</button>
+                    <button class="px-4 py-2 rounded-md hover:bg-gray-200">AI</button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Workflow Automation -->
+                <div class="bg-white rounded-xl shadow-md p-6 feature-card transition-all duration-300">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-project-diagram text-indigo-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Visual Workflow Builder</h3>
+                    <p class="text-gray-600 mb-4">Drag-and-drop interface to create complex workflows with conditional logic, loops, and error handling.</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-2"></i> Node-based workflow design</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-2"></i> Branching and merging</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-2"></i> Error handling workflows</li>
+                    </ul>
+                </div>
+
+                <!-- Triggers -->
+                <div class="bg-white rounded-xl shadow-md p-6 feature-card transition-all duration-300">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-bolt text-indigo-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Trigger System</h3>
+                    <p class="text-gray-600 mb-4">Multiple ways to initiate workflows based on events, schedules, or manual triggers.</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-2"></i> Webhook triggers</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-2"></i> Cron schedules</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-2"></i> Manual execution</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-2"></i> Event-based triggers</li>
+                    </ul>
+                </div>
+
+                <!-- Data Transformation -->
+                <div class="bg-white rounded-xl shadow-md p-6 feature-card transition-all duration-300">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-exchange-alt text-indigo-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Data Transformation</h3>
+                    <p class="text-gray-600 mb-4">Powerful tools to manipulate and transform data between nodes.</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-2"></i> JSON manipulation</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-2"></i> Date/string formatting</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-2"></i> Data aggregation</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-2"></i> Custom JavaScript/TypeScript</li>
+                    </ul>
+                </div>
+
+                <!-- Error Handling -->
+                <div class="bg-white rounded-xl shadow-md p-6 feature-card transition-all duration-300">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-exclamation-triangle text-indigo-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Error Handling</h3>
+                    <p class="text-gray-600 mb-4">Robust error management with customizable recovery workflows.</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-2"></i> Automatic retries</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-2"></i> Error tracking</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-2"></i> Custom error workflows</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-2"></i> Notification system</li>
+                    </ul>
+                </div>
+
+                <!-- DevOps Features -->
+                <div class="bg-white rounded-xl shadow-md p-6 feature-card transition-all duration-300">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-server text-indigo-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">DevOps Capabilities</h3>
+                    <p class="text-gray-600 mb-4">Enterprise-grade features for professional deployment and management.</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-2"></i> Docker/Kubernetes support</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-2"></i> CI/CD integration</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-2"></i> Environment variables</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-2"></i> Workflow versioning</li>
+                    </ul>
+                </div>
+
+                <!-- AI Features -->
+                <div class="bg-white rounded-xl shadow-md p-6 feature-card transition-all duration-300">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-brain text-indigo-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">AI Integration</h3>
+                    <p class="text-gray-600 mb-4">Built-in support for leading AI platforms and services.</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-2"></i> OpenAI/GPT integration</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-2"></i> Hugging Face models</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-2"></i> AI-powered data processing</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-2"></i> Natural language processing</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="integrations" class="mb-16">
+            <h2 class="text-2xl font-bold text-gray-800 mb-8">Integration Categories</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+                <div class="bg-indigo-600 text-white p-4 rounded-lg">
+                    <h3 class="font-semibold mb-2"><i class="fas fa-cloud mr-2"></i> Cloud Services</h3>
+                    <ul class="text-sm space-y-1">
+                        <li>AWS</li>
+                        <li>Google Cloud</li>
+                        <li>Azure</li>
+                        <li>DigitalOcean</li>
+                    </ul>
+                </div>
+                <div class="bg-blue-600 text-white p-4 rounded-lg">
+                    <h3 class="font-semibold mb-2"><i class="fas fa-envelope mr-2"></i> Communication</h3>
+                    <ul class="text-sm space-y-1">
+                        <li>Slack</li>
+                        <li>Discord</li>
+                        <li>Microsoft Teams</li>
+                        <li>Telegram</li>
+                    </ul>
+                </div>
+                <div class="bg-green-600 text-white p-4 rounded-lg">
+                    <h3 class="font-semibold mb-2"><i class="fas fa-shopping-cart mr-2"></i> E-Commerce</h3>
+                    <ul class="text-sm space-y-1">
+                        <li>Shopify</li>
+                        <li>WooCommerce</li>
+                        <li>Stripe</li>
+                        <li>PayPal</li>
+                    </ul>
+                </div>
+                <div class="bg-purple-600 text-white p-4 rounded-lg">
+                    <h3 class="font-semibold mb-2"><i class="fas fa-database mr-2"></i> Databases</h3>
+                    <ul class="text-sm space-y-1">
+                        <li>PostgreSQL</li>
+                        <li>MySQL</li>
+                        <li>MongoDB</li>
+                        <li>Redis</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <h3 class="text-xl font-semibold mb-4">Custom Integration Options</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-medium text-gray-800 mb-2"><i class="fas fa-code text-indigo-500 mr-2"></i> HTTP Requests</h4>
+                        <p class="text-gray-600 text-sm">Connect to any REST or GraphQL API with customizable HTTP nodes.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-medium text-gray-800 mb-2"><i class="fas fa-terminal text-indigo-500 mr-2"></i> Webhooks</h4>
+                        <p class="text-gray-600 text-sm">Create and manage webhooks for real-time event processing.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-medium text-gray-800 mb-2"><i class="fas fa-plug text-indigo-500 mr-2"></i> Custom Nodes</h4>
+                        <p class="text-gray-600 text-sm">Build your own nodes using JavaScript/TypeScript for specialized integrations.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-medium text-gray-800 mb-2"><i class="fas fa-shield-alt text-indigo-500 mr-2"></i> OAuth Support</h4>
+                        <p class="text-gray-600 text-sm">Secure authentication with OAuth 1.0 and 2.0 for protected APIs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="mb-16">
+            <h2 class="text-2xl font-bold text-gray-800 mb-8">Pricing & Deployment Options</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <!-- Free Tier -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="bg-gray-100 p-6">
+                        <h3 class="text-xl font-bold text-gray-800">Community</h3>
+                        <p class="text-gray-600 mb-4">Open-source version</p>
+                        <div class="flex items-end">
+                            <span class="text-3xl font-bold">$0</span>
+                            <span class="text-gray-500 ml-1">/forever</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Self-hosted only</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>All core features</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Community support</span>
+                            </li>
+                            <li class="flex items-start text-gray-400">
+                                <i class="fas fa-times mt-1 mr-2"></i>
+                                <span>No managed hosting</span>
+                            </li>
+                        </ul>
+                        <button class="w-full py-2 border border-gray-300 rounded-lg font-medium">Download</button>
+                    </div>
+                </div>
+
+                <!-- Starter -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border-2 border-indigo-500 relative">
+                    <div class="absolute top-4 right-4 bg-indigo-500 text-white text-xs px-2 py-1 rounded-full">POPULAR</div>
+                    <div class="bg-indigo-50 p-6">
+                        <h3 class="text-xl font-bold text-gray-800">Starter</h3>
+                        <p class="text-gray-600 mb-4">For small teams</p>
+                        <div class="flex items-end">
+                            <span class="text-3xl font-bold">$20</span>
+                            <span class="text-gray-500 ml-1">/month</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Managed hosting</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>5 active workflows</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Email support</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Basic monitoring</span>
+                            </li>
+                        </ul>
+                        <button class="w-full py-2 bg-indigo-600 text-white rounded-lg font-medium">Get Started</button>
+                    </div>
+                </div>
+
+                <!-- Enterprise -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="bg-gray-800 p-6">
+                        <h3 class="text-xl font-bold text-white">Enterprise</h3>
+                        <p class="text-gray-300 mb-4">For large organizations</p>
+                        <div class="flex items-end">
+                            <span class="text-3xl font-bold text-white">Custom</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Unlimited workflows</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Dedicated infrastructure</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>24/7 priority support</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Advanced security</span>
+                            </li>
+                        </ul>
+                        <button class="w-full py-2 bg-gray-800 text-white rounded-lg font-medium">Contact Sales</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <h3 class="text-xl font-semibold mb-4">Additional Enterprise Features</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-medium text-gray-800 mb-2"><i class="fas fa-users text-indigo-500 mr-2"></i> Team Collaboration</h4>
+                        <p class="text-gray-600 text-sm">Role-based access control, shared workflows, and team management tools.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-medium text-gray-800 mb-2"><i class="fas fa-shield-alt text-indigo-500 mr-2"></i> Security</h4>
+                        <p class="text-gray-600 text-sm">SSO, audit logs, IP whitelisting, and data encryption at rest and in transit.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-medium text-gray-800 mb-2"><i class="fas fa-chart-line text-indigo-500 mr-2"></i> Analytics</h4>
+                        <p class="text-gray-600 text-sm">Detailed usage metrics, performance monitoring, and workflow analytics.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-medium text-gray-800 mb-2"><i class="fas fa-cloud-upload-alt text-indigo-500 mr-2"></i> Deployment Options</h4>
+                        <p class="text-gray-600 text-sm">Cloud, on-premise, or hybrid deployments with enterprise-grade SLAs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-indigo-50 rounded-xl p-8 md:p-12 mb-16">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Developer Resources</h2>
+                <p class="text-gray-600 mb-8">n8n provides extensive resources for developers to extend and customize the platform.</p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <a href="#" class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <i class="fas fa-book text-indigo-600 text-2xl mb-2"></i>
+                        <p class="font-medium">Documentation</p>
+                    </a>
+                    <a href="#" class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <i class="fab fa-github text-indigo-600 text-2xl mb-2"></i>
+                        <p class="font-medium">GitHub Repo</p>
+                    </a>
+                    <a href="#" class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <i class="fas fa-code text-indigo-600 text-2xl mb-2"></i>
+                        <p class="font-medium">API Reference</p>
+                    </a>
+                    <a href="#" class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <i class="fas fa-users text-indigo-600 text-2xl mb-2"></i>
+                        <p class="font-medium">Community</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Product</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white">Features</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Integrations</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Pricing</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Roadmap</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white">Documentation</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Tutorials</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Community</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white">About</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Careers</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Contact</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Press</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Connect</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white text-xl"><i class="fab fa-github"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white text-xl"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white text-xl"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <i class="fas fa-robot text-indigo-400 text-2xl mr-2"></i>
+                    <span class="font-bold">n8nGPT</span>
+                </div>
+                <div class="text-gray-400 text-sm">
+                    &copy; 2025 n8nGPT. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple tab functionality for demonstration
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.bg-gray-100 button');
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    tabs.forEach(t => t.classList.remove('tab-active'));
+                    this.classList.add('tab-active');
+                });
+            });
+            
+            // Smooth scrolling for navigation
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
